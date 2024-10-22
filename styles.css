@@ -173,6 +173,7 @@ body {
     margin: 0;
     padding: 0;
 }
+/* Carousel */
 .carousel {
     position: relative;
     width: 100%;
@@ -185,38 +186,38 @@ body {
 .carousel-container {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    will-change: transform; /* Improve performance */
+    will-change: transform; /* Added to improve performance */
 }
+
 .carousel-slide {
     display: flex;
     min-width: 100%;
     box-sizing: border-box;
+       
 }
 .carousel-box {
-    width: 100%; /* Takes up full width of its container */
-    max-width: 400px; /* Optional: Maximum width on larger screens */
-    height: auto; /* Make height dynamic */
-    aspect-ratio: 1 / 1; /* Maintain a square aspect ratio */
-    overflow: hidden;
+    width: 400px; /* Set a fixed width for all boxes */
+    height: 400px; /* Set a fixed height for all boxes */
+    overflow: hidden; /* Hide any overflow */
     display: flex;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    background-color: white; /* Background color */
-    border: 1px solid #ddd; /* Optional: Border */
-    border-radius: 8px; /* Rounded corners */
-    margin: auto;
+    background-color: white !important; /* Force beige background color */
+    border: 1px solid #ddd; /* Optional: Border color */
+    border-radius: 8px; /* Optional: Rounded corners */
 }
-/* Ensure images within carousel are responsive */
 .carousel-box img {
-    width: 100%;
+    width: 100%; /* Make image fill the box */
     height: 100%;
-    object-fit: cover; /* Cover the container while maintaining aspect ratio */
-    background-color: white;
+    object-fit: cover; /* Ensure the image covers the box without distortion */
+     background-color: white;
+
 }
 .carousel-container .carousel-box {
     background-color: white;
 }
+
 
 
 .carousel-arrow {
@@ -232,6 +233,7 @@ body {
     font-size: 18px;
     border-radius: 3px;
 }
+
 .left-arrow {
     left: 10px;
 }
